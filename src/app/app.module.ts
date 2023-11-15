@@ -9,6 +9,7 @@ import { UsersDetailsComponent } from './components/users/users-details/users-de
 import { UserItemComponent } from './components/users/user-item/user-item.component';
 import { UsersService } from './services/users/users.service';
 import { HttpClientModule } from '@angular/common/http';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 @NgModule({
   declarations: [
@@ -21,7 +22,8 @@ import { HttpClientModule } from '@angular/common/http';
   imports: [
     BrowserModule,
     AppRoutingModule,
-    HttpClientModule
+    HttpClientModule,
+    BrowserAnimationsModule
   ],
   providers: [UsersService],
   bootstrap: [AppComponent]
