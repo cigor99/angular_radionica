@@ -6,19 +6,24 @@ import { AppComponent } from './app.component';
 import { UsersListComponent } from './components/users/users-list/users-list.component';
 import { UsersCreateComponent } from './components/users/users-create/users-create.component';
 import { UsersDetailsComponent } from './components/users/users-details/users-details.component';
+import { UserItemComponent } from './components/users/user-item/user-item.component';
+import { UsersService } from './services/users/users.service';
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [
     AppComponent,
     UsersListComponent,
     UsersCreateComponent,
-    UsersDetailsComponent
+    UsersDetailsComponent,
+    UserItemComponent
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    HttpClientModule
   ],
-  providers: [],
+  providers: [UsersService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
