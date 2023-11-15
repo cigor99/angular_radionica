@@ -6,5 +6,7 @@ import { Component } from '@angular/core';
   styleUrl: './users-details.component.scss'
 })
 export class UsersDetailsComponent {
-
+    public firstName = "Ime"
+    public lastName = "Prezime"
+    public email = "email@email.com"
 }
