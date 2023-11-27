@@ -1,1 +1,9 @@
-<user-item *ngFor="let user of users" [user]="user"></user-item>
+<!--<layout>-->
+    <custom-table [headers]="userHeaders">
+        <tr *ngFor="let user of users">
+            <td>{{ user.name }}</td>
+            <td>{{ user.surname }}</td>
+            <td>{{ user.email }}</td>
+        </tr>
+    </custom-table>
+<!--</layout>-->

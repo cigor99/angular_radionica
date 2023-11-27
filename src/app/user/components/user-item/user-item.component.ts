@@ -1,5 +1,5 @@
 import { Component, Input } from '@angular/core';
-import { User } from '../../models/users.model';
+import { User } from '../../models/user.model';
 
 @Component({
   selector: 'user-item',
@@ -8,5 +8,5 @@ import { User } from '../../models/users.model';
 })
 export class UserItemComponent {
 
-  @Input() user: User | undefined;
+  @Input() user: User = {name: '', surname: '', email: ''};
 }

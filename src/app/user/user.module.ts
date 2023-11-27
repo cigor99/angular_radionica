@@ -3,6 +3,7 @@ import { CommonModule } from '@angular/common';
 import { UserItemComponent } from './components/user-item/user-item.component';
 import { UserListComponent } from './components/user-list/user-list.component';
 import { UserRouterModule } from './user-router.module';
+import {SharedModule} from "../shared/shared.module";
 
 @NgModule({
   declarations: [
@@ -11,7 +12,8 @@ import { UserRouterModule } from './user-router.module';
   ],
   imports: [
     CommonModule,
-    UserRouterModule
+    UserRouterModule,
+    SharedModule
   ]
 })
 export class UserModule { }
