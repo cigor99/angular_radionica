@@ -10,7 +10,7 @@ import { User } from '../../models/user.model';
 export class UserListComponent implements OnInit, OnDestroy {
 
   public users: User[] = [];
-  public userHeaders: string[] = ["name", "surname", "email"]
+  public userHeaders: string[] = ["name", "surname", "email", "delete"]
 
   constructor(private userService: UserService){}
 
