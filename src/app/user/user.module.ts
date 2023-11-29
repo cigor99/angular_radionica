@@ -5,6 +5,8 @@ import { UserListComponent } from './components/user-list/user-list.component';
 import { UserRouterModule } from './user-router';
 import {SharedModule} from "../shared/shared.module";
 import { UserCreateComponent } from './components/user-create/user-create.component';
+import { ReactiveFormsModule } from '@angular/forms';
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -15,7 +17,9 @@ import { UserCreateComponent } from './components/user-create/user-create.compon
   imports: [
     CommonModule,
     UserRouterModule,
-    SharedModule
+    SharedModule,
+    ReactiveFormsModule,
+    HttpClientModule
   ]
 })
 export class UserModule { }
