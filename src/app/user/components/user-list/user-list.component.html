@@ -1,10 +1,7 @@
 <layout>
     <custom-table [headers]="userHeaders">
         <tr *ngFor="let user of users">
-            <td>{{ user.name }}</td>
-            <td>{{ user.surname }}</td>
-            <td>{{ user.email }}</td>
-            <td><action-button text="Delete"></action-button></td>
+            <user-item class="full-width" [user]="user"></user-item>
         </tr>
     </custom-table>
 </layout>

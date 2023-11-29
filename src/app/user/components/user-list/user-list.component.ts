@@ -1,6 +1,6 @@
 import { Component, OnDestroy, OnInit } from '@angular/core';
 import { UserService } from '../../services/user.service';
-import { User } from '../../models/user.model';
+import { UserDTO } from '../../models/user.model';
 
 @Component({
   selector: 'user-list',
@@ -9,13 +9,13 @@ import { User } from '../../models/user.model';
 })
 export class UserListComponent implements OnInit, OnDestroy {
 
-  public users: User[] = [];
+  public users: UserDTO[] = [];
   public userHeaders: string[] = ["name", "surname", "email", "delete"]
 
   constructor(private userService: UserService){}
 
   ngOnInit(): void {
-      this.userService.getUsers().subscribe(response => {
+      this.userService.getAll().subscribe(response => {
           this.users = response;
       })
   }
