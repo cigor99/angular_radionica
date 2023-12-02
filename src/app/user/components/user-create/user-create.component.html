@@ -1,22 +1,25 @@
 <div class="container-centered user-create-container">
-    <form [formGroup]="userForm" (ngSubmit)="onSubmit()" class="user-form">
-        <div class="form-header">
-            <h1>Create user</h1>
-            <button class="btn-navigation" (click)="backButtonClick()">Back</button>
-        </div>
+  <form [formGroup]="userForm" (ngSubmit)="onSubmit()" class="user-form">
+    <div class="form-header">
+      <h1>Create user</h1>
+      <button class="btn-navigation" (click)="backButtonClick()">Back</button>
+    </div>
 
-        <div class="form-group">
-            <label for="name">Name:</label>
-            <input class="input-name" type="text" formControlName="name" id="name">
-        </div>
-        <div class="form-group">
-            <label for="surname">Surname:</label>
-            <input class="input-name" type="text" formControlName="surname" id="surname">
-        </div>
-        <div class="form-group">
-            <label for="email">Email:</label>
-            <input class="input-email" type="email" formControlName="email" id="email">
-        </div>
-        <button class="btn-submit" type="submit">Submit</button>
-    </form>
+    <div class="form-group">
+      <label for="name">Name:</label>
+      <input class="input-name" type="text" formControlName="name" id="name">
+    </div>
+
+    <div class="form-group">
+      <label for="surname">Surname:</label>
+      <input class="input-name" type="text" formControlName="surname" id="surname">
+    </div>
+
+    <div class="form-group">
+      <label for="email">Email:</label>
+      <input class="input-email" type="email" formControlName="email" id="email">
+    </div>
+
+    <button class="btn-submit" type="submit">Submit</button>
+  </form>
 </div>
