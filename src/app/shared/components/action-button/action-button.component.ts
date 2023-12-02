@@ -9,7 +9,8 @@ export class ActionButtonComponent {
   @Input() text: string = '';
   @Output() messageEvent = new EventEmitter<null>();
 
-  public sendMessage() {
+  public sendMessage($event: MouseEvent) {
+    $event.stopPropagation();
     this.messageEvent.emit();
   }
 }

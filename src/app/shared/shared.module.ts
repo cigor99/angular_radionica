@@ -10,7 +10,7 @@ import { ActionButtonComponent } from './components/action-button/action-button.
   ],
     exports: [
         TableComponent,
-        ActionButtonComponent
+        ActionButtonComponent,
     ],
     imports: [
         CommonModule

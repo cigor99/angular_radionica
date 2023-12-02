@@ -3,13 +3,13 @@
 
 .input-email,
 .input-name {
-    @extend %input-base;
+  @extend %input-base;
 }
 
 .user-create-container {
-    padding-top: 50px;
+  padding-top: 50px;
 }
 
 .user-form {
-    @extend %form-base;
+  @extend %form-base;
 }

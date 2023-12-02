@@ -19,15 +19,8 @@ export class UserListComponent implements OnInit, OnDestroy {
   constructor(private userService: UserService, private router: Router) {
   }
 
-  public userRowClick(user: UserDTO) {
-    this.router.navigate(['/create'], {
-      queryParams: {
-        name: user.name,
-        surname: user.surname,
-        email: user.email,
-        id: user.id
-      }
-    })
+  public userRowClick(id: number) {
+    this.router.navigate(['/upsert', id]);
   }
 
   public ngOnInit(): void {

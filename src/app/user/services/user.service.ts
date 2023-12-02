@@ -15,6 +15,10 @@ export class UserService {
     return this.httpService.get<UserDTO[]>(`${BACKEND_URL}/admins/${ADMIN_ID}/users`);
   }
 
+  public getOne(id: number): Observable<UserDTO> {
+    return this.httpService.get<UserDTO>(`${BACKEND_URL}/admins/${ADMIN_ID}/users/${id}`);
+  }
+
   public create(user: UpsertUserRequestDTO): Observable<number> {
     return this.httpService.post<number>(`${BACKEND_URL}/admins/${ADMIN_ID}/users`, user);
   }
