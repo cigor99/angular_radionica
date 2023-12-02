@@ -1,0 +1,27 @@
+// Color Palette
+$color-background: #212634; // Dark background
+$color-dark: #2A2F3A; // Dark shade for text that is readable on light backgrounds
+$color-primary: #4A81D4; // A softer primary color
+$color-secondary: #E1A957; // A warm secondary color
+$color-accent: #D45D79; // A bright accent color
+$color-light: #E0E0E0; // A light shade that's not too white, suitable for dark mode
+$color-danger: #E57373; // A danger color for errors or warnings
+$color-white: #FFFFFF; // Soft white for text that is readable on dark backgrounds
+
+// Spacing Variables
+$spacing-unit: 8px;
+
+// Typography
+$font-stack: 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif;
+$font-color: $color-light;
+$font-size-base: 16px;
+
+// Layout
+$content-width: 80%;
+$border-radius: 4px;
+
+// Buttons
+$button-padding: 12px 24px;
+$button-font-size: $font-size-base;
+$button-border-radius: $border-radius;
+

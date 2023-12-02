@@ -1,0 +1,15 @@
+@import "variables";
+
+:host {
+    display: table-row;
+    width: 100%;
+}
+
+td {
+    text-align: left;
+    padding: $spacing-unit;
+}
+
+td:last-child {
+    text-align: center;
+}

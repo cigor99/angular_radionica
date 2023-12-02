@@ -1,7 +1,7 @@
 import { Component, EventEmitter, Input, Output } from '@angular/core';
 
 @Component({
-  selector: 'action-button',
+  selector: 'ar-action-button',
   templateUrl: './action-button.component.html',
   styleUrl: './action-button.component.scss'
 })

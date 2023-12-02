@@ -1,11 +1,3 @@
-<layout>
-    <custom-table [headers]="userHeaders">
-        <tr *ngFor="let user of users">
-            <user-item class="full-width" [user]="user"></user-item>
-        </tr>
-    </custom-table>
-    <br>
-    <br>
-    <br>
-    <user-create></user-create>
-</layout>
+<ar-table [headers]="userHeaders">
+    <ar-user-item *ngFor="let user of users" [user]="user"></ar-user-item>
+</ar-table>

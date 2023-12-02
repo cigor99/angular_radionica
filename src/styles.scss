@@ -1,4 +1,61 @@
-/* You can add global styles to this file, and also import other style files */
+@import '_variables';
+@import '_base-classes.scss';
 
-html, body { height: 100%; }
-body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+//html, body { height: 100%; }
+body { margin: 0;
+    font-family: $font-stack;
+    background-color: $color-background;
+    color: $font-color;
+    font-size: $font-size-base }
+
+// Specific button variations
+.btn-submit {
+    @extend %button-base;
+    background-color: $color-primary;
+    color: $color-white;
+}
+
+.btn-delete {
+    @extend %button-base;
+    background-color: $color-danger;
+    color: $color-white;
+}
+
+.btn-navigation {
+    @extend %button-base;
+    background-color: $color-dark;
+    color: $color-white;
+    max-height: 40px;
+    font-size: 14px;
+}
+
+// Container styles for centered content
+.container-centered {
+    max-width: $content-width;
+    margin: 0 auto;
+    padding: $spacing-unit;
+}
+
+.form-header{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+.form-group {
+    margin-bottom: 15px;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: $spacing-unit;
+}
+
+.form-group input[type="text"],
+.form-group input[type="email"] {
+    width: 100%;
+    padding: $spacing-unit;
+    border: 1px solid darken($color-light, 10%);
+    border-radius: 10px;
+    color: $color-dark;
+}

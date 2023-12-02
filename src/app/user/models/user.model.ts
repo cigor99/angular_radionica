@@ -5,7 +5,7 @@ export interface UserDTO {
     email: string;
 }
 
-export interface CreateUserRequest {
+export interface CreateUserRequestDTO {
     name: string;
     surname: string;
     email: string;

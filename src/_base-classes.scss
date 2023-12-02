@@ -1,0 +1,70 @@
+@import '_variables';
+
+%input-base {
+    padding: $spacing-unit;
+    border: 1px solid $color-accent;
+    border-radius: $border-radius;
+    font-size: $font-size-base;
+    color: $font-color;
+    background-color: transparent;
+    width: 100%;
+
+    &:focus {
+        outline: none;
+        border-color: $color-primary;
+    }
+}
+
+%button-base {
+    padding: $button-padding;
+    border: none;
+    border-radius: $button-border-radius;
+    font-size: $button-font-size;
+    cursor: pointer;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    margin: $spacing-unit;
+    transition: background-color 0.3s ease;
+
+    &:hover {
+        opacity: 0.9;
+    }
+
+    &:focus {
+        outline: none;
+    }
+}
+
+%table-base {
+    width: 100%;
+    border-collapse: collapse;
+    margin: $spacing-unit 0;
+    background-color: $color-light;
+    color: $color-dark;
+
+    th {
+        text-align: left;
+        padding: $spacing-unit;
+        border-bottom: 1px solid darken($color-light, 10%);
+    }
+
+    th {
+        background-color: darken($color-light, 5%);
+        color: $color-dark;
+    }
+
+    tr th:last-child {
+        text-align: center;
+    }
+}
+
+%form-base {
+    color: $color-dark;
+    max-width: 400px;
+    margin: auto;
+    padding: 15px;
+    border: 1px solid darken($color-light, 10%);
+    border-radius: 5px;
+    background-color: $color-light;
+}

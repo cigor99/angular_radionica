@@ -1,0 +1,15 @@
+@import 'variables';
+@import 'base-classes';
+
+.input-email,
+.input-name {
+    @extend %input-base;
+}
+
+.user-create-container {
+    padding-top: 50px;
+}
+
+.user-form {
+    @extend %form-base;
+}

@@ -2,7 +2,7 @@ import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs';
 import { BACKEND_URL, ADMIN_ID } from '../../shared/statics/statics';
-import { CreateUserRequest, UserDTO } from '../models/user.model';
+import { CreateUserRequestDTO, UserDTO } from '../models/user.model';
 
 @Injectable({
   providedIn: 'root'
@@ -15,7 +15,7 @@ export class UserService {
     return this.httpService.get<UserDTO[]>(`${BACKEND_URL}/admins/${ADMIN_ID}/users`);
   }
 
-  public create(user: CreateUserRequest): Observable<number> {
+  public create(user: CreateUserRequestDTO): Observable<number> {
     return this.httpService.post<number>(`${BACKEND_URL}/admins/${ADMIN_ID}/users`, user);
   }
 
