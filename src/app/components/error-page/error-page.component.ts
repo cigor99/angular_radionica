@@ -25,7 +25,4 @@ export class ErrorPageComponent implements OnInit, OnDestroy{
   public ngOnDestroy(): void {
     this.subscriptions.forEach(subscription => subscription.unsubscribe());
   }
-
-
-
 }

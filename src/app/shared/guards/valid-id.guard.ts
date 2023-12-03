@@ -13,7 +13,7 @@ export const validIdGuard: CanActivateFn = (route: ActivatedRouteSnapshot, state
   const param = route.paramMap.get('id');
   const id = parseInt(param ?? '');
   if (isNaN(id) || id < 0) {
-    return router.createUrlTree(['/'], {queryParams: {isError: true}});
+    return router.createUrlTree(['/error']);
   }
   return true;
 };
