@@ -4,7 +4,7 @@ import {UserService} from "../../services/user.service";
 import {ActivatedRoute, Router} from "@angular/router";
 import {Location} from "@angular/common";
 import {UpsertUserRequestDTO, UserDTO} from "../../models/user.model";
-import {Subscription} from "rxjs";
+import {Subscription, debounceTime, tap} from "rxjs";
 
 @Component({
   selector: 'ar-user-upsert',
@@ -28,24 +28,6 @@ export class UserUpsertComponent implements OnInit, OnDestroy {
     })
   }
 
-  public onSubmit() {
-    const {name, surname, email} = this.userForm.getRawValue();
-    if (name && surname && email) {
-      const user: UpsertUserRequestDTO = {name, surname, email}
-
-      if (this.userId != 0) {
-        this.subscriptions.push(this.userService.patch(this.userId, user).subscribe(_ => {
-          this.router.navigate(['/']);
-        }))
-        return;
-      }
-
-      this.subscriptions.push(this.userService.create(user).subscribe(_ => {
-        this.router.navigate(['/']);
-      }));
-    }
-  }
-
   public backButtonClick() {
     this.location.back();
   }
@@ -63,9 +45,31 @@ export class UserUpsertComponent implements OnInit, OnDestroy {
         }
       }));
     }
+
+    this.userForm.valueChanges.pipe(debounceTime(2000)).subscribe(_ => {
+      this.submitForm()
+    })
   }
 
   public ngOnDestroy() {
     this.subscriptions.forEach(subscription => subscription.unsubscribe());
+  }
+
+  private submitForm() {
+    const {name, surname, email} = this.userForm.getRawValue();
+    if (name && surname && email) {
+      const user: UpsertUserRequestDTO = {name, surname, email}
+
+      if (this.userId != 0) {
+        this.subscriptions.push(this.userService.patch(this.userId, user).subscribe(_ => {
+          this.router.navigate(['/']);
+        }))
+        return;
+      }
+
+      this.subscriptions.push(this.userService.create(user).pipe(tap(_ => console.log("Creating user"))).subscribe(_ => {
+        this.router.navigate(['/']);
+      }));
+    }
   }
 }

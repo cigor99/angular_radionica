@@ -1,7 +1,7 @@
 <div class="container-centered user-create-container">
-  <form [formGroup]="userForm" (ngSubmit)="onSubmit()" class="user-form">
+  <form [formGroup]="userForm" class="user-form">
     <div class="form-header">
-      <h1>Create user</h1>
+      <h1>Upsert user</h1>
       <button class="btn-navigation" type="button" (click)="backButtonClick()">Back</button>
     </div>
 
@@ -19,7 +19,5 @@
       <label for="email">Email:</label>
       <input class="input-email" type="email" formControlName="email" id="email">
     </div>
-
-    <button class="btn-submit" type="submit">Submit</button>
   </form>
 </div>

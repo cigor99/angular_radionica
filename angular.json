@@ -39,7 +39,7 @@
             "styles": [
               "src/styles.scss",
               "src/_variables.scss",
-                "src/_base-classes.scss"
+              "src/_base-classes.scss"
             ],
             "stylePreprocessorOptions": {
                 "includePaths": [

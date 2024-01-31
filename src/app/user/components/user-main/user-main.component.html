@@ -1,4 +1,7 @@
 <div class="container-centered user-main-container">
-    <button class="btn-submit" (click)="createBtnClick()">Create New User</button>
-    <ar-user-list></ar-user-list>
+    <div class="page-actions">
+        <button class="btn-submit" (click)="createBtnClick()">Create New User</button>
+        <input class="input-search" type="text" placeholder="Search" (input)="onSearchChange($event)">
+    </div>
+    <ar-user-list [searchTerm]="searchTerm"></ar-user-list>
 </div>

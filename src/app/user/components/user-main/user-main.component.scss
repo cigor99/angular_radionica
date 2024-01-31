@@ -1,3 +1,19 @@
+@import 'variables';
+@import 'base-classes';
+
 .user-main-container {
     padding-top: 50px;
+    
+    .page-actions {
+        display: flex;
+        justify-content: space-between;
+        
+        .input-search{
+            @extend %input-base;
+            border-color: $color-primary;
+            width: 20%;
+            background-color: $color-light;
+            color: $color-dark;
+        }
+    }
 }
